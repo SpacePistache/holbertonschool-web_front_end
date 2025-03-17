@@ -1,0 +1,1 @@
+Here we're going to be creating the front-end of a site using HTML and eventually CSS.
