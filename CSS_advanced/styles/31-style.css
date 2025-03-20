@@ -225,7 +225,10 @@ a:active {
 	display: block;
 	padding-top: 1rem;
 	color: var(--color-primary);
-	position: relative;
+}
+
+.card-testimonial .card-quote {
+    position: relative;
 }
 
 .card-testimonial .card-quote::before {
