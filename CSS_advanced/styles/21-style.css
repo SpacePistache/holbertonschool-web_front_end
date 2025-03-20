@@ -163,7 +163,7 @@ ul.row {
 
 [class^="col-"] {
 	float: left;
-	padding: var(--col-padding);
+	padding: 0.5rem;
 }
 
 .col-1-3 {
