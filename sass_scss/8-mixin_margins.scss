@@ -1,0 +1,12 @@
+@mixin margin-size($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+body {
+  @include margin-size(10px, 10px);
+}
+
+div {
+  @include margin-size(15px, 15px);
+}
