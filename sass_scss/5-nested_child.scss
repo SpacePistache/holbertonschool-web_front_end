@@ -1,0 +1,9 @@
+$text-colour: #3D3D3D;
+$text-colour1: #FF0000;
+
+body {
+	color: $text-colour;
+	.red {
+		color: $text-colour1;
+	}
+}
