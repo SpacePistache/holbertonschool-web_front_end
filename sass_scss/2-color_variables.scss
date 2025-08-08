@@ -1,0 +1,15 @@
+$main-colour: #3D3D3D;
+$background-colour: #6D6D6D;
+
+body {
+	color: $main-colour;
+	background-color: $background-colour;
+}
+
+p {
+	color: $main-colour;
+}
+
+h2 {
+	background-color: $background-colour;
+}
