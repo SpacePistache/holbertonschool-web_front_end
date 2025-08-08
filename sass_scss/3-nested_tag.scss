@@ -1,11 +1,8 @@
-$marginus-maximus: 10px 10px 10px 10px;
-$no-marginus-maximus: 0;
-$padding-power: 0;
 
 body {
-	margin: $no-marginus-maximus;
-	padding: $padding-power;
+	margin: 0;
+	padding: 0;
 	p {
-		margin: $marginus-maximus;
+		margin: 0;
 	}
 }
