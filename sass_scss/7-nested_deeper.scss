@@ -1,0 +1,13 @@
+$text-size1: 14px;
+$text-size2: 16px;
+$text-size3: 12px; 
+
+body {
+  font-size: $text-size1;
+  h1 {
+    font-size: $text-size2;
+    &.smaller {
+      font-size: $text-size3;
+    }
+  }
+}
