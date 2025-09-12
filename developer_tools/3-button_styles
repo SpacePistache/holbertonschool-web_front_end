@@ -2,6 +2,12 @@
     color: #f8f9fa;
     border-color: #f8f9fa;
 }
+
+.btn-xl {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+}
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -23,13 +29,4 @@
 	ease-in-out, border-color 0.15s 
 	ease-in-out, box-shadow 0.15s 
 	ease-in-out;
-}
-
-a {
-    color: #78CDD2;
-    text-decoration: none;
-    background-color: transparent;
-}
-*, *::before, *::after {
-    box-sizing: border-box;
 }
