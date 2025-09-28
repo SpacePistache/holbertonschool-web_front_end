@@ -180,7 +180,7 @@
   /* Grid
       ============================= */
   [class*='row-'] {
-    display: flex
+    display: flex;
   }
 
   ul.row {
