@@ -709,17 +709,8 @@ textarea:focus {
   background-color: var(--color-light-grey);
 }
 
-/* Placeholder text
-   ============================= */
+
 ::placeholder {
-  color: var(--color-grey);
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: var(--color-grey);
-}
-
-::-ms-input-placeholder {
-  color: var(--color-grey);
+  font-style: italic;
+  font-size: var(--color-light-grey);
 }
