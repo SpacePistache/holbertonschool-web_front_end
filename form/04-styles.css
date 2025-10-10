@@ -28,6 +28,8 @@
 
   --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-headings: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
