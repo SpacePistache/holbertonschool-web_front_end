@@ -28,7 +28,6 @@
 
   --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-headings: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
   --font-size-small: 1.2rem;
@@ -712,5 +711,5 @@ textarea:focus {
 
 ::placeholder {
   font-style: italic;
-  color: var(--color-light-grey);
+  font-size: var(--font-size-small);
 }
