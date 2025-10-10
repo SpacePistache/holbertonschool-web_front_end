@@ -713,5 +713,4 @@ textarea:focus {
 ::placeholder {
   font-style: italic;
   font-size: var(--color-light-grey);
-  opacity: 1;
 }
