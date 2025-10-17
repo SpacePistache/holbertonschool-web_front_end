@@ -723,12 +723,12 @@ textarea:focus {
   background-color: var(--color-white);
 }
 
-:form-field-container {
+form-field-container:target {
   position: relative;
 
 }
 
-:form-field-icon {
+form-field-icon:target {
   font-style: normal;
 }
 
