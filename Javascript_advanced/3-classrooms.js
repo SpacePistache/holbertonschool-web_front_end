@@ -18,3 +18,5 @@ function createClassRoom(numberOfStudents) {
 }
 
 const classRoom = createClassRoom(10);
+
+console.log(classRoom[0]());
