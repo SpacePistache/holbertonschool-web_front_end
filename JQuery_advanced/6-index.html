@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+  <title>6-index</title>
+</head>
+
+<body>
+
+<script type="application/javascript">
+
+  function createFamilyTree() {
+    $("body").append(
+      $("<table>").append(
+        $("<thead>").append(
+          $("<tr>").append(
+            $("<th>").text("Firstname"),
+            $("<th>").text("Lastname")
+          )
+        ),
+        $("<tbody>")
+      )
+    );
+  }
+
+  function addNewMember(firstName, lastName, position) {
+    const row = $("<tr>").append(
+      $("<td>").text(firstName),
+      $("<td>").text(lastName),
+      $("<td>")
+        .text("(x)")
+        .css("background-color", "orange")
+        .click(function () {
+          $(this).parent().remove();
+        })
+    );
+
+    if (position === "before") {
+      $("tbody tr").first().before(row);
+    } else {
+      $("tbody").prepend(row);
+    }
+  }
+
+  function createForm() {
+    const form = $("<form>").append(
+      $("<input>").attr("type", "text"),
+      $("<input>").attr("type", "text"),
+      $("<select>").append(
+        $("<option>").val("before").text("Before"),
+        $("<option>").val("after").text("After")
+      ),
+      $("<input>").attr("type", "submit").val("Add")
+    );
+
+    form.submit(function (event) {
+      event.preventDefault();
+
+      const firstName = $("input:nth-of-type(1)").val();
+      const lastName = $("input:nth-of-type(2)").val();
+      const position = $("select").val();
+
+      addNewMember(firstName, lastName, position);
+    });
+
+    $("table").before(form);
+  }
+
+  createFamilyTree();
+  createForm();
+
+</script>
+
+</body>
+</html>

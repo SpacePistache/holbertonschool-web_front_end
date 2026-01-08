@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>11-index</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+<script type="application/javascript">
+
+  function addPostRow(data) {
+    $("body").append(
+      $("<p>").append(
+        $("<span>").text(
+          "Post created with id " +
+          data.id +
+          ", title: " +
+          data.title +
+          ", author: " +
+          data.author
+        )
+      )
+    );
+  }
+
+  function listPosts() {
+    $.get("http://localhost:3000/posts")
+      .done(function (data) {
+        data.forEach(function (post) {
+          addPostRow(post);
+        });
+      })
+      .fail(function () {
+        alert("Server Error");
+      });
+  }
+
+  function buildForm() {
+    const form = $("<form>").append(
+      $("<div>").append(
+        $("<label>").attr("for", "author").text("Author"),
+        $("<input>").attr({ type: "text", id: "author" })
+      ),
+      $("<div>").append(
+        $("<label>").attr("for", "title").text("Title"),
+        $("<textarea>").attr("id", "title")
+      ),
+      $("<input>").attr("type", "submit")
+    );
+
+    form.submit(function (event) {
+      event.preventDefault();
+      sendForm();
+    });
+
+    $("body").append(form);
+  }
+
+  function sendForm() {
+    const data = {
+      title: $("#title").val(),
+      author: $("#author").val()
+    };
+
+    $("form").after(
+      $("<p>").text("About to send the query to the API")
+    );
+
+    $.post("http://localhost:3000/posts", data)
+      .done(function (response) {
+        addPostRow(response);
+      })
+      .fail(function () {
+        alert("Error sending the POST query");
+      });
+  }
+
+  $(document).ready(function () {
+    listPosts();
+    buildForm();
+  });
+
+</script>
+
+</body>
+</html>
