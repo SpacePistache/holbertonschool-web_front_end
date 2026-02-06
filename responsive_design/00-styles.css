@@ -368,7 +368,7 @@
 
   .hero-homepage {
     background-image: url(images/banner-home.jpg);
-    background-position: 65% 8rem;
+    background-position: 75% 0;
     background-repeat: no-repeat;
     background-size: 90rem auto;
   }
@@ -391,7 +391,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 35vh;
+    min-height: 50vh;
   }
   /* Section Latest news
       ============================= */
@@ -858,3 +858,4 @@
     cursor: text;
     margin: 0 1rem;
   }
+    
