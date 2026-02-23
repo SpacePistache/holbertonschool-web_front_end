@@ -286,15 +286,8 @@
 
 	}
 	.navbar-menu {
-		flex: 1;
+		display: none;
 	}
-  }
-
-  .header .nav {
-    flex-direction: column;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
   }
 
   /* Header
@@ -318,6 +311,22 @@
 	overflow: hidden;
 	max-height: 0;
 	transition: max-height .2s ease-out;
+  }
+
+  .header .menu-icon {
+	cursor: pointer;
+	padding: 2.5;
+	position: fixed;
+	user-select: none;
+  }
+
+  .menu-icon .navicon {
+	background: var(--color-white);
+	display: block;
+	width: 2rem;
+	height: .2rem;
+	position: relative;
+	transition: background .2s ease-out;
   }
 
   /* Footer
