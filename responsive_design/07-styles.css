@@ -1,4 +1,4 @@
-/* SUMMARY
+  /* SUMMARY
 1. GLOBAL
 2. LAYOUT
 3. SECTION
@@ -163,6 +163,18 @@
   .button-primary:hover {
     color: var(--color-primary);
     background: var(--color-white);
+  }
+
+  @media (max-width: 480px) {
+    .html {
+      font-size: 57%;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .html {
+      font-size: 60%;
+    }
   }
 
   /* Helpers
