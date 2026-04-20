@@ -14,6 +14,16 @@
         alert("Sorry, your browser does not support Web storage. Try again with a better one");
       } else {
         createStore();
+
+        const h2 = document.createElement("h2");
+        h2.id = "cart-title";
+        h2.textContent = "Your cart:";
+        document.body.appendChild(h2);
+
+        const div = document.createElement("div");
+        div.id = "cart-div";
+        document.body.appendChild(div);
+
         displayCart();
       }
 
@@ -59,21 +69,9 @@
       }
 
       function displayCart() {
-        const h2 = document.getElementById("cart-title") || document.createElement("h2");
-        h2.id = "cart-title";
-        h2.textContent = "Your cart:";
-        document.body.appendChild(h2);
-
-        let div = document.getElementById("cart-div");
-        if (div) {
-          const list = div.querySelector("ul");
-          if (list) list.remove();
-        } else {
-          div = document.createElement("div");
-          div.id = "cart-div";
-          document.body.appendChild(div);
-        }
-
+        const div = document.getElementById("cart-div");
+        const list = div.querySelector("ul");
+        if (list) list.remove();
         updateCart(div);
       }
 
